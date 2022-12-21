@@ -5,108 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modulo03_Desafio02_Condiciones</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-        body p {
-            font-size: 1.3rem;
-        }
-
-        .divButtons {
-            display: block;
-            height: auto;
-            padding: 30px;
-            text-align: center;
-            background-color: #ccc;
-            margin: 20px;
-        }
-
-        .divStyle {
-            /* display: block; */
-            display: none;
-            height: auto;
-            padding: 20px 20px;
-            text-align: center;
-            background-color: #ccc;
-            margin-top: 20px;
-        }
-
-        .divStyle2 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            padding: 20px 20px;
-            text-align: center;
-            background-color: #bbb;
-            margin-top: 20px;
-        }
-
-        .divStyle3 {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 10px;
-            text-align: center;
-            margin-top: 5px;
-        }
-
-        .btnStyle {
-            width: 150px;
-            height: 40px;
-            margin: 10px;
-            border: solid 3px rgb(72, 72, 72);
-            border-radius: 10px;
-            font-size: 1.2rem;
-            transition-duration: 0.3s;
-            cursor: pointer;
-        }
-
-        .btnStyle:hover {
-            background-color: rgb(100, 165, 255);
-        }
-
-        .btnStyle:focus {
-            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.24);
-            transform: translateY(4px);
-            background-color: #0e74da;
-            color: white;
-            border-radius: 20px;
-
-        }
-
-        .imgPart1 {
-            min-width: 300px;
-            width: 30%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .imgDesafioStyle {
-            border: solid 5px red;
-            border-radius: 20px;
-        }
-
-        .imgPart2 {
-            /* padding: 20px; */
-            min-width: 230px;
-            width: 30%;
-            height: 300px;
-            border: solid 4px white;
-            border-radius: 30px;
-            margin: 20px;
-            
-        }
-
-        .inputStyle{
-            height: 30px;
-            font-size: 1.2rem;
-            padding: 5px;
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -146,105 +47,60 @@
         </div>
         <button id="btnVerificar" class="btnStyle">Verificar</button>
         <p id="par2"><span id="spanStickersCount"></span></p>
-
     </div>
-
+    
+    <!-- Parte 3 -->
     <div id="part3" class="divStyle">
         <h3>Desafio - PARTE 3</h3>
+        <p>Ingresa el password <b> CORRECTO.</b></p>
 
+        <div>
+            <select id="selectUno" class="selectStyle">
+                <option value="1">l</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+              <select id="selectDos"class="selectStyle">
+                <option value="1">l</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+              <select id="selectTres"class="selectStyle">
+                <option value="1">l</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+        </div>
+        <button id="btnVerificar2" class="btnStyle">Verificar</button>
+        <p id="par3"></p>
+        
+        <button id="btnPistas" class="btnStyle">Mostrar pistas</button>
+        <div class="divStyle4">
+            <p>Pista 1: <b> Ingresa los números 9 - 1 - 1</b></p>
+            <p>Pista 2: <b> Ingresa los números 7 - 1 - 4</b></p>
+            <p>Pista 3: <b> Ingresa los números 2 - 7 - 2</b></p>
+        </div>
     </div>
 
-    <script>
-        btnPart1 = document.querySelector('#btnPart1');
-        btnPart2 = document.querySelector('#btnPart2');
-        btnPart3 = document.querySelector('#btnPart3');
-        part1 = document.querySelector('#part1');
-        part2 = document.querySelector('#part2');
-        part3 = document.querySelector('#part3');
-
-        btnPart1.addEventListener("click", () => {
-            part1.style.display = 'block';
-            part2.style.display = 'none';
-            part3.style.display = 'none';
-            console.log("borderCheck = " + borderCheck);
-        });
-
-        btnPart2.addEventListener("click", () => {
-            part1.style.display = 'none';
-            part2.style.display = 'block';
-            part3.style.display = 'none';
-        });
-
-        btnPart3.addEventListener("click", () => {
-            part1.style.display = 'none';
-            part2.style.display = 'none';
-            part3.style.display = 'block';
-        });
-
-        //PARTE 1
-        imgDesafio1 = document.querySelector('#img-1');
-        par1 = document.querySelector('#par-1');
-
-        borderCheck = false;
-        // console.log("borderCheck = " + borderCheck);
-
-        imgDesafio1.addEventListener("click", () => {
-            borderCheck = !borderCheck;
-            // console.log(borderCheck);
-            // console.log("click on img");
-            if (borderCheck) {
-                console.log("Se AGREGA borde");
-                imgDesafio1.classList.add("imgDesafioStyle");
-                par1.innerHTML = "Ahora toca la imagen para <b>QUITAR</b> el borde...";
-            } else {
-                console.log("Se QUITA borde");
-                imgDesafio1.classList.remove("imgDesafioStyle");
-                par1.innerHTML = "Ahora toca la imagen para <b>AGREGAR</b> un borde...";
-            }
-            console.log("borderCheck = " + borderCheck);
-        });
-
-        //PARTE 2
-        btnVerificar = document.querySelector('#btnVerificar');
-        par2 = document.querySelector('#par2');
-        spanStickersCount = document.querySelector('#spanStickersCount');
-
-
-        btnVerificar.addEventListener("click", () =>
-        {
-            opt1 = document.querySelector('#opt1').value;
-            opt2 = document.querySelector('#opt2').value;
-            opt3 = document.querySelector('#opt3').value;
-            totalStickers = (+opt1 + +opt2 + +opt3);
-            // console.log("btn cllick");
-            // console.log(opt1);
-            // console.log(opt2);
-            // console.log(opt3);
-
-            if (totalStickers < 0) {
-                // console.log("Total de Stickers: " + totalStickers);
-                par2.innerHTML = "<b> ERROR EN CANTIDAD </b>";
-            }
-            else if (totalStickers >= 0 && totalStickers < 10) {
-                console.log("Total de Stickers: " + totalStickers);
-                spanStickersCount.innerHTML = "<b>" + totalStickers + "</b>" + "<b> STICKERS</b>";
-                par2.innerHTML = " Llevas: " + spanStickersCount.innerHTML + " en total."
-            }
-
-            else if (totalStickers == 10){
-                console.log("Total de Stickers: " + totalStickers);
-                spanStickersCount.innerHTML = "<b>" + totalStickers + "</b>" + "<b> STICKERS</b>";
-                par2.innerHTML = " Llevas:" + spanStickersCount.innerHTML + " en total. <b>(MAX.)</b>"
-            }
-
-            else if (totalStickers > 10){
-                console.log("Total de Stickers: " + totalStickers);
-            par2.innerHTML = "<b>¡LLEVAS DEMASIADOS STICKERS! VUELVE A CONTAR.<b>";
-            }
-        });
-
-
-    </script>
+    <script src="assets/js/script.js"> </script>
 </body>
 
 </html>

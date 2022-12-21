@@ -1,0 +1,116 @@
+body p {
+    font-size: 1.3rem;
+}
+
+.divButtons {
+    display: block;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #ccc;
+    margin: 20px;
+}
+
+.divStyle {
+    display: none;
+    height: auto;
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+
+.divStyle2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #bbb;
+    margin-top: 20px;
+}
+
+.divStyle3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.divStyle4 {
+    display: none;
+    height: auto;
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #aaa;
+    margin-top: 20px;
+}
+
+.btnStyle {
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    border: solid 3px rgb(72, 72, 72);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.btnStyle:hover {
+    background-color: rgb(100, 165, 255);
+}
+
+.btnStyle:focus {
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.24);
+    transform: translateY(4px);
+    background-color: #0e74da;
+    color: white;
+    border-radius: 20px;
+}
+
+.imgPart1 {
+    min-width: 300px;
+    width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.imgDesafioStyle {
+    border: solid 5px red;
+    border-radius: 20px;
+}
+
+.imgPart2 {
+    /* padding: 20px; */
+    min-width: 230px;
+    width: 30%;
+    height: 300px;
+    border: solid 4px white;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.inputStyle{
+    height: 30px;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.selectStyle{
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    border: solid 3px rgb(72, 72, 72);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
