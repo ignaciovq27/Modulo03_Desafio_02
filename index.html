@@ -8,6 +8,9 @@
     <title>Document</title>
 
     <style>
+        .imgPart1 {
+            width: 600px;
+        }
         .divStyle {
             display: none;
             width: 100%;
@@ -29,9 +32,10 @@
     <div id="part1" class="divStyle">
         <h3>Desafio - PARTE 1</h3>
         <p id="par-1">¡Toca la imagen para AGREGAR un borde!</p>
-        <img class="border-1" id="img-1" src="https://placedog.net/300/400?r" alt="">
+        <img class="imgPart1" id="img-1" src="https://images.pexels.com/photos/162140/duckling-birds-yellow-fluffy-162140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
     </div>
 
+    <!-- Parte 2 -->
     <div id="part2" class="divStyle">
         <h3>Desafio - PARTE 2</h3>
         <p id="par-1">¡Toca la imagen para AGREGAR un borde!</p>
@@ -45,7 +49,6 @@
     </div>
 
     <script>
-
         btnPart1 = document.querySelector('#btnPart1');
         btnPart2 = document.querySelector('#btnPart2');
         btnPart3 = document.querySelector('#btnPart3');
@@ -57,46 +60,47 @@
             part1.style.display = 'block';
             part2.style.display = 'none';
             part3.style.display = 'none';
+            console.log("borderCheck = " + borderCheck);
         });
+
         btnPart2.addEventListener("click", () => {
             part1.style.display = 'none';
             part2.style.display = 'block';
             part3.style.display = 'none';
         });
+        
         btnPart3.addEventListener("click", () => {
             part1.style.display = 'none';
             part2.style.display = 'none';
             part3.style.display = 'block';
         });
 
-
-
-
         //PARTE 1
         imgDesafio1 = document.querySelector('#img-1');
         par1 = document.querySelector('#par-1');
-        imgCheck = true;
+
+        borderCheck = false;
+        // console.log("borderCheck = " + borderCheck);
 
         imgDesafio1.addEventListener("click", () => {
-            // console.log("img click");
-            if (imgCheck) {
-                console.log("Se agrega borde");
+            borderCheck = !borderCheck;
+            // console.log(borderCheck);
+            // console.log("click on img");
+            if (borderCheck) {
+                console.log("Se AGREGA borde");
                 imgDesafio1.style.border = "solid 5px red";
-                imgCheck = false;
-                par1.innerHTML = "Ahora toca la imagen para QUITAR el borde..."
-            }
-            else {
-                console.log("img sin borde");
+                par1.innerHTML = "Ahora toca la imagen para QUITAR el borde...";
+            } else {
+                console.log("Se QUITA borde");
                 imgDesafio1.style.border = "none";
-                imgCheck = true;
-                par1.innerHTML = "Ahora toca la imagen para AGREGAR un borde..."
-
+                par1.innerHTML = "Ahora toca la imagen para AGREGAR un borde...";
             }
-            console.log("imgCheck =" + imgCheck)
+            console.log("borderCheck = " + borderCheck);
         });
 
 
-            //PARTE 2
+
+        //PARTE 2
 
     </script>
 </body>
