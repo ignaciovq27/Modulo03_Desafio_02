@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .divStyle {
+            display: none;
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background-color: #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btnPart1">Parte 1</button>
+    <button id="btnPart2">Parte 2</button>
+    <button id="btnPart3">Parte 3</button>
+
+
+    <!-- Parte 1 -->
+    <div id="part1" class="divStyle">
+        <h3>Desafio - PARTE 1</h3>
+        <p id="par-1">¡Toca la imagen para AGREGAR un borde!</p>
+        <img class="border-1" id="img-1" src="https://placedog.net/300/400?r" alt="">
+    </div>
+
+    <div id="part2" class="divStyle">
+        <h3>Desafio - PARTE 2</h3>
+        <p id="par-1">¡Toca la imagen para AGREGAR un borde!</p>
+        <img class="border-1" id="img-1" src="https://placedog.net/300/400?r" alt="">
+    </div>
+
+    <div id="part3" class="divStyle">
+        <h3>Desafio - PARTE 3</h3>
+        <p id="par-1">¡Toca la imagen para AGREGAR un borde!</p>
+        <img class="border-1" id="img-1" src="https://placedog.net/300/400?r" alt="">
+    </div>
+
+    <script>
+
+        btnPart1 = document.querySelector('#btnPart1');
+        btnPart2 = document.querySelector('#btnPart2');
+        btnPart3 = document.querySelector('#btnPart3');
+        part1 = document.querySelector('#part1');
+        part2 = document.querySelector('#part2');
+        part3 = document.querySelector('#part3');
+
+        btnPart1.addEventListener("click", () => {
+            part1.style.display = 'block';
+            part2.style.display = 'none';
+            part3.style.display = 'none';
+        });
+        btnPart2.addEventListener("click", () => {
+            part1.style.display = 'none';
+            part2.style.display = 'block';
+            part3.style.display = 'none';
+        });
+        btnPart3.addEventListener("click", () => {
+            part1.style.display = 'none';
+            part2.style.display = 'none';
+            part3.style.display = 'block';
+        });
+
+
+
+
+        //PARTE 1
+        imgDesafio1 = document.querySelector('#img-1');
+        par1 = document.querySelector('#par-1');
+        imgCheck = true;
+
+        imgDesafio1.addEventListener("click", () => {
+            // console.log("img click");
+            if (imgCheck) {
+                console.log("Se agrega borde");
+                imgDesafio1.style.border = "solid 5px red";
+                imgCheck = false;
+                par1.innerHTML = "Ahora toca la imagen para QUITAR el borde..."
+            }
+            else {
+                console.log("img sin borde");
+                imgDesafio1.style.border = "none";
+                imgCheck = true;
+                par1.innerHTML = "Ahora toca la imagen para AGREGAR un borde..."
+
+            }
+            console.log("imgCheck =" + imgCheck)
+        });
+
+
+            //PARTE 2
+
+    </script>
+</body>
+
+</html>
