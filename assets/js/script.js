@@ -9,7 +9,7 @@ btnPart1.addEventListener("click", () => {
     part1.style.display = 'block';
     part2.style.display = 'none';
     part3.style.display = 'none';
-    console.log("borderCheck = " + borderCheck);
+    // console.log("borderCheck = " + borderCheck);
 });
 
 btnPart2.addEventListener("click", () => {
@@ -37,15 +37,15 @@ imgDesafio1.addEventListener("click", () => {
     // console.log(borderCheck);
     // console.log("click on img");
     if (borderCheck) {
-        console.log("Se AGREGA borde");
+        // console.log("Se AGREGA borde");
         imgDesafio1.classList.add("imgDesafioStyle");
         par1.innerHTML = "Ahora toca la imagen para <b>QUITAR</b> el borde...";
     } else {
-        console.log("Se QUITA borde");
+        // console.log("Se QUITA borde");
         imgDesafio1.classList.remove("imgDesafioStyle");
         par1.innerHTML = "Ahora toca la imagen para <b>AGREGAR</b> un borde...";
     }
-    console.log("borderCheck = " + borderCheck);
+    // console.log("borderCheck = " + borderCheck);
 });
 
 
@@ -69,19 +69,19 @@ btnVerificar.addEventListener("click", () => {
         par2.innerHTML = "<b> ERROR EN CANTIDAD </b>";
     }
     else if (totalStickers >= 0 && totalStickers < 10) {
-        console.log("Total de Stickers: " + totalStickers);
+        // console.log("Total de Stickers: " + totalStickers);
         spanStickersCount.innerHTML = "<b>" + totalStickers + "</b>" + "<b> STICKERS</b>";
         par2.innerHTML = " Llevas: " + spanStickersCount.innerHTML + " en total."
     }
 
     else if (totalStickers == 10) {
-        console.log("Total de Stickers: " + totalStickers);
+        // console.log("Total de Stickers: " + totalStickers);
         spanStickersCount.innerHTML = "<b>" + totalStickers + "</b>" + "<b> STICKERS</b>";
         par2.innerHTML = " Llevas:" + spanStickersCount.innerHTML + " en total. <b>(MAX.)</b>"
     }
 
     else if (totalStickers > 10) {
-        console.log("Total de Stickers: " + totalStickers);
+        // console.log("Total de Stickers: " + totalStickers);
         par2.innerHTML = "<b>¡LLEVAS DEMASIADOS STICKERS! VUELVE A CONTAR.<b>";
     }
 });
