@@ -93,7 +93,7 @@
             /* padding: 20px; */
             min-width: 230px;
             width: 30%;
-            height: auto;
+            height: 300px;
             border: solid 4px white;
             border-radius: 30px;
             margin: 20px;
@@ -103,6 +103,8 @@
         .inputStyle{
             height: 30px;
             font-size: 1.2rem;
+            padding: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -128,17 +130,17 @@
         <div class="divStyle3">
             <div class="divStyle2">
                 <img class="imgPart2" id="sticker-1" src="https://placedog.net/300/400?r" alt="">
-                <label for="opt1"> Sticker 1</label>
+                <label for="opt1"> STICKER 1</label>
                 <input class="inputStyle" type="number" min="0" name="opt1" id="opt1" >
             </div>
             <div class="divStyle2">
                 <img class="imgPart2" id="sticker-2" src="https://placedog.net/300/401?r" alt="">
-                <label for="opt2"> Sticker 2</label>
+                <label for="opt2"> STICKER 2</label>
                 <input class="inputStyle" type="number" min="0" name="opt2" id="opt2">
             </div>
             <div class="divStyle2">
                 <img class="imgPart2" id="sticker-3" src="https://placedog.net/300/402?r" alt="">
-                <label for="opt3"> Sticker 3</label>
+                <label for="opt3"> STICKER 3</label>
                 <input class="inputStyle" type="number" min="0" name="opt3" id="opt3">
             </div>
         </div>
@@ -221,7 +223,7 @@
 
             if (totalStickers < 0) {
                 // console.log("Total de Stickers: " + totalStickers);
-                par2.innerHTML = "ERROR EN CANTIDAD";
+                par2.innerHTML = "<b> ERROR EN CANTIDAD </b>";
             }
             else if (totalStickers >= 0 && totalStickers < 10) {
                 console.log("Total de Stickers: " + totalStickers);
